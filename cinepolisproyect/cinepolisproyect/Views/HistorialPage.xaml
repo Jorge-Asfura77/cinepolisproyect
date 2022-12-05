@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.HistorialPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Historial"
+             Icon="outline_article_black_24dp.png">
+    <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" TextColor="#010630" HorizontalOptions="Center" FontSize="24"/>
+                <Button Image="refresh.png" TextColor="Gray" Margin="130,0,0,0"  BackgroundColor="Transparent" x:Name="btn_Refresh" Clicked="btn_Refresh_Clicked"/>
+            </FlexLayout>
+        </Frame>
+        <StackLayout>
+            <Label x:Name="txtNodata" Text="" FontSize="Title" FontAttributes="Bold"/>
+        </StackLayout>
+        <ListView ItemsSource="{Binding lsttarjeta}" x:Name="ListViewHistorial" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid  Padding="20, 0, 20, 50">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="N Facturacion:" FontAttributes="Bold"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding trj_ntarjeta}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Cine:" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding IdCine}"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Pelicula:" FontAttributes="Bold"/>
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding IdPelicula}"/>
+                            <Label Grid.Row="3" Grid.Column="0" Text="Hora:" FontAttributes="Bold"/>
+                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding IdHorario}"/>
+                            <Label Grid.Row="4" Grid.Column="0" Text="Combo:" FontAttributes="Bold"/>
+                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding IdCombo}"/>
+                            <Label Grid.Row="5" Grid.Column="0" Text="Refrescos Extra:" FontAttributes="Bold"/>
+                            <Label Grid.Row="5" Grid.Column="1" Text="{Binding RefrescoExtra}"/>
+                            <Label Grid.Row="6" Grid.Column="0" Text="Asientos Comprados:" FontAttributes="Bold"/>
+                            <Label Grid.Row="6" Grid.Column="1" Text="{Binding asientosSelected}"/>
+                            <Label Grid.Row="7" Grid.Column="0" Text="Asientos Total Pago:" FontAttributes="Bold"/>
+                            <Label Grid.Row="7" Grid.Column="1" Text="{Binding totalpagar}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>      
+        </ListView>
+    </StackLayout>
+</ContentPage>

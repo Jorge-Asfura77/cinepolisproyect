@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="cinepolisproyect.Views.StartPage">
+    <StackLayout>
+        <!--<Label  Text="Bienvenido a" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,370" FontAttributes="Italic" FontSize="17" />-->
+        <Image Source="logoc.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="50,300,50,10"/>
+        <!--<Label HorizontalTextAlignment="Center" FontSize="14" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,50" Text=" ¡Ahora disponible nuestra App, inicia sesion o crea una cuenta y disfruta la experiencia!"/>-->
+        <Button Text="Regístrate" TextColor="#002069" HeightRequest="40" MinimumWidthRequest="300" CornerRadius="20" BackgroundColor="#F7B700" Margin="50,10,50,10" Clicked="Button_Clicked"/>
+        <Button Text="Tengo una cuenta" TextColor="#002069" HeightRequest="40" MinimumWidthRequest="300" CornerRadius="20" BackgroundColor="#F7B700" Margin="50,10,50,10" Clicked="Button_Clicked_1"/>
+
+    </StackLayout>
+</ContentPage>

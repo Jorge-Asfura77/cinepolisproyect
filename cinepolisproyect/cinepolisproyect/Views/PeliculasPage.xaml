@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.PeliculasPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Inicio"
+             Icon="baseline_movie_black_24dp.png"
+             BackgroundColor="White">
+    
+    <StackLayout Orientation="Vertical">
+        <FlexLayout WidthRequest="100" BackgroundColor="#002069" Padding="5">
+            <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
+        </FlexLayout>
+        <Frame Margin="5" BackgroundColor="#002069" CornerRadius="5" >
+            <!--<Label HorizontalOptions="Center" Text="Seleccione su cine:" FontSize="26" TextColor="#20366b"></Label>-->
+            <Picker x:Name="CmbCine" Title="Cine" Margin="0" TitleColor="#FECA30" TextColor="White" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
+        </Frame>
+        <ScrollView>
+            <StackLayout>
+                
+                <!--Pelicula 1-->
+                <Frame BackgroundColor="#002069" Margin="5" Padding="0" CornerRadius="5">
+                    <StackLayout Orientation="Horizontal" Margin="5" BackgroundColor="Transparent">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer  x:Name="StackPeli1" NumberOfTapsRequired="1" Tapped="StackPeli1_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Frame BackgroundColor="Transparent" Padding="0" CornerRadius="5">
+                            <Image Source="cartelera1.jpg" HeightRequest="150"/>
+                        </Frame>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label x:Name="lblpeli1" Text="Eternals" FontSize="24" TextColor="#DEA21E"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Clasificación: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label x:Name="lbldate1" TextColor="White" Text="A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Genero: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="Aventura/Acción"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Duracion: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="2h 37m"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="L.70.00"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--Pelicula 2-->
+                <Frame BackgroundColor="#002069" Margin="5" Padding="0" CornerRadius="5">
+                    <StackLayout Orientation="Horizontal" Margin="5" BackgroundColor="Transparent">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer  x:Name="StackPeli2" NumberOfTapsRequired="1" Tapped="StackPeli2_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Frame BackgroundColor="Transparent" Padding="0" CornerRadius="5">
+                            <Image Source="cartelera2.jpg" HeightRequest="150"/>
+                        </Frame>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label x:Name="lblpeli2" Text="Eternals" FontSize="24" TextColor="#DEA21E"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Clasificación: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label x:Name="lbldate2" TextColor="White" Text="A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Genero: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="Aventura/Acción"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Duracion: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="2h 37m"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="L.70.00"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--Pelicula 3-->
+                <Frame BackgroundColor="#002069" Margin="5" Padding="0" CornerRadius="5">
+                    <StackLayout Orientation="Horizontal" Margin="5" BackgroundColor="Transparent">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer  x:Name="StackPeli3" NumberOfTapsRequired="1" Tapped="StackPeli3_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Frame BackgroundColor="Transparent" Padding="0" CornerRadius="5">
+                            <Image Source="cartelera3.jpg" HeightRequest="150"/>
+                        </Frame>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label x:Name="lblpeli3" Text="Eternals" FontSize="24" TextColor="#DEA21E"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Clasificación: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label x:Name="lbldate3" TextColor="White" Text="A"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Genero: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="Aventura/Acción"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Duracion: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="2h 37m"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " TextColor="#FECA30" FontAttributes="Bold"/>
+                                <Label TextColor="White" Text="L.70.00"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+        <FlexLayout>
+            <Label x:Name="txtidcine" Text="" IsVisible="false"/>
+        </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

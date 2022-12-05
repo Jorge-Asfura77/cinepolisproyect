@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.ProductosPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#7384E9">
+    <ScrollView>
+        
+        <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*" Padding="30" RowSpacing="30">
+            
+            <StackLayout Orientation="Horizontal" Margin="0,20" VerticalOptions="Start" Spacing="20">
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox Color="Pink" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Image Source="combo1.png" Aspect="AspectFill" WidthRequest="100" HeightRequest="120" HorizontalOptions="Start"/>
+
+                <StackLayout>
+                    <Label Text="Combo #1" TextColor="yellow" FontSize="20"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="Palomitas de maíz + dos refrescos " TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="L. 120" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="End"/>
+            
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="0,20" VerticalOptions="Start" Spacing="20">
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox Color="Pink"  VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Image Source="combo2.png" Aspect="AspectFill" WidthRequest="100" HeightRequest="120" HorizontalOptions="Start"/>
+
+                <StackLayout>
+                    <Label Text="Combo #2" TextColor="yellow" FontSize="20"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="Palomitas de maíz + un refresco  " TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="L. 95" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <BoxView Grid.Row="1" BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="End"/>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" Margin="0,20" VerticalOptions="Start" Spacing="20">
+                
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox Color="Pink"  VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Image Source="combo3.png" Aspect="AspectFill" WidthRequest="100" HeightRequest="120" HorizontalOptions="Start"/>
+
+                <StackLayout>
+                    <Label Text="Combo #3" TextColor="yellow" FontSize="20"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="Nachos + un refresco" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="L. 100" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <BoxView Grid.Row="2" BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="End"/>
+
+            <StackLayout Grid.Row="3" Orientation="Horizontal" Margin="0,20" VerticalOptions="Start" Spacing="20">
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox Color="Pink"  VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Image Source="refresco.png" Aspect="AspectFill" WidthRequest="100" HeightRequest="120" HorizontalOptions="Start"/>
+
+                <StackLayout>
+                    <Label Text="Refresco" TextColor="yellow" FontSize="20"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="Un refresco adicional" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Label Text="L. 35" TextColor="yellow" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <BoxView Grid.Row="3" BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="End"/>
+
+            <Button Grid.Row="4" x:Name="btncomprar" Clicked="btncomprar_Clicked" Text="Proceder con la Compra"  TextColor="#7384E9" WidthRequest="240" HeightRequest="40" 
+                    CornerRadius="20" BackgroundColor="Yellow" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

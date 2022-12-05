@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#20366b"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="cinepolisproyect.Views.TicketPage">
+    <ScrollView>
+        <StackLayout x:Name="stkQR" >
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="LogoCinepolis.png"  HeightRequest="40" HorizontalOptions="Start"/>
+                    <Label Text="CINEPOLIS"  TextColor="#010630" HorizontalOptions="Center" FontSize="24"/>
+                <Button Text="Home" TextColor="Gray"  Margin="95,0,0,0"  ContentLayout="Right,20"  Image="outline_home_black_24dp.png"  BackgroundColor="Transparent" x:Name="btn_home" Clicked="btn_home_Clicked"/>
+               
+            </FlexLayout>
+        </Frame>
+        <FlexLayout>
+            <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
+            <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtidhorario" Text="{Binding IdHorario}" TextColor="Transparent"/>
+            <Label x:Name="txtIdCombo" Text="{Binding IdCombo}" TextColor="Transparent"/>
+            <Label x:Name="txtRefrescoExtra" Text="{Binding RefrescoExtra}" TextColor="Transparent"/>
+            <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
+        </FlexLayout>
+
+            <Label Text="PELICULA" HorizontalOptions="Center" FontSize="30" Margin="20, 0, 20, 0" TextColor="#FFFFFAF0" />
+            <Image x:Name="imgpeli" HeightRequest="150" HorizontalOptions="Center"/>
+            <Label Text="Ticket" HorizontalOptions="Center" FontSize="25" Margin="20, 0, 20, 0" TextColor="#FFFFFAF0" />
+           
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

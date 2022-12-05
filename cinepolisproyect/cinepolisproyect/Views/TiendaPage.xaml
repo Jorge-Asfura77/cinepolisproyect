@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.TiendaPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <StackLayout>
+        
+        <FlexLayout BackgroundColor="#002069" Padding="10">
+            <Label Text="Selección de Combo" TextColor="#DEA21E" FontSize="22"></Label>
+        </FlexLayout>
+
+    <ScrollView>
+    <StackLayout Padding="5">
+        
+        <!--Combo 1-->
+        <Frame Padding="0" BackgroundColor="#002069" CornerRadius="20">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  x:Name="StackCombo1" NumberOfTapsRequired="1" Tapped="StackCombo1_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                
+                <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="20">
+                    <Image Source="combo1.jpg" HeightRequest="150"/>
+                </Frame>
+                
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Label Text="Combo 1" FontSize="24" TextColor="#FECA30"/>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="- Palomitas de maíz" FontSize="18" TextColor="White"/>
+                                <Label Text="- Dos refrescos" FontSize="18" TextColor="White"/>
+                                <Label Text="" FontSize="18" TextColor="White"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " FontSize="18" TextColor="White"/>
+                                <Label Text="L. 120.00" FontSize="18" FontAttributes="Bold" TextColor="#FECA30"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+        <!--Combo 2-->
+        <Frame Padding="0" BackgroundColor="#002069" CornerRadius="20">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  x:Name="StackCombo2" NumberOfTapsRequired="1" Tapped="StackCombo2_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                
+                <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="20">
+                    <Image Source="combo2.jpg" HeightRequest="150"/>
+                </Frame>
+                
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Label Text="Combo 2" FontSize="24" TextColor="#FECA30"/>
+                    <StackLayout Orientation="Vertical">
+                                <Label Text="- Palomitas de maíz" FontSize="18" TextColor="White"/>
+                                <Label Text="- Refresco" FontSize="18" TextColor="White"/>
+                                <Label Text="" FontSize="18" TextColor="White"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " FontSize="18" TextColor="White"/>
+                                <Label Text="L. 95.00" FontSize="18" FontAttributes="Bold" TextColor="#FECA30"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+        <!--Combo 3-->
+        <Frame Padding="0" BackgroundColor="#002069" CornerRadius="20">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  x:Name="StackCombo3" NumberOfTapsRequired="1" Tapped="StackCombo3_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                
+                <Frame Padding="0" BackgroundColor="Transparent" CornerRadius="20">
+                    <Image Source="combo3.jpg" HeightRequest="150"/>
+                </Frame>
+                
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Label Text="Combo 3" FontSize="24" TextColor="#FECA30"/>
+                    <StackLayout Orientation="Vertical">
+                                <Label Text="- Nachos" FontSize="18" TextColor="White"/>
+                                <Label Text="- Refresco" FontSize="18" TextColor="White"/>
+                                <Label Text="" FontSize="18" TextColor="White"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                                <Label Text="Precio: " FontSize="18" TextColor="White"/>
+                        <Label Text="L. 100.00" FontSize="18" FontAttributes="Bold" TextColor="#FECA30"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+        
+         <!--Refresco extra-->
+        <Frame Padding="0" BackgroundColor="#002069" CornerRadius="20">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <!--<StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="StackCombo3_Tapped"/>
+                </StackLayout.GestureRecognizers>-->
+                
+                <!--<Frame Padding="0" BackgroundColor="Transparent" CornerRadius="20">
+                    <Image Source="combo3.jpg" HeightRequest="150"/>
+                </Frame>-->
+                
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
+                    <StackLayout Orientation="Vertical">
+                                <Label Text="Refresco adicional" FontSize="24" TextColor="#FECA30" HorizontalOptions="Start"/>
+                                <Entry x:Name="txtrefrescoextra" Text="" Keyboard="Numeric" HorizontalTextAlignment="Center" HorizontalOptions="Start" WidthRequest="50" Placeholder="0" PlaceholderColor="White" TextColor="White"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                <Label Text="Precio: " FontSize="18" TextColor="White" HorizontalOptions="Start"/>
+                        <Label Text="L. 35.00 c/u" FontSize="18" HorizontalOptions="End" FontAttributes="Bold" TextColor="#FECA30"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+                <Frame BackgroundColor="#FECA30" Padding="0" CornerRadius="20" HeightRequest="40">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  x:Name="StackCombo0" NumberOfTapsRequired="1" Tapped="StackCombo0_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                    <Label Text="No Deseo Comprar Comida" TextColor="#002069"/>
+                </StackLayout>
+            </StackLayout>
+            </Frame>
+        <FlexLayout IsVisible="false">
+            <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
+            <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtidhorario" Text="{Binding IdHorario}" TextColor="Transparent"/>
+            <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
+            <Label x:Name="txtjsonbutaca" Text="{Binding JsonButaca}" TextColor="Transparent"/>
+        </FlexLayout>
+    </StackLayout>
+    </ScrollView>
+
+    </StackLayout>
+</ContentPage>

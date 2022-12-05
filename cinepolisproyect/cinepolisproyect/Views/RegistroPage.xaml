@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:cinepolisproyect"
+             x:Class="cinepolisproyect.Views.RegistroPage">
+    <StackLayout>
+        <FlexLayout BackgroundColor="#002069" Padding="10">
+            <Label Text="Crear cuenta" TextColor="White" FontSize="22"></Label>
+        </FlexLayout>
+        <StackLayout>
+            
+            <Image Source="LogoCinepolis.png" HeightRequest="150" HorizontalOptions="Center" Margin="0,100,0,0"/>
+
+            <StackLayout Padding="5">
+                <Entry
+                           x:Name="ttname" 
+                           FontSize="15" 
+                           Placeholder="Nombre" 
+                           TextColor="Black"
+                           HorizontalOptions="FillAndExpand" 
+                           PlaceholderColor="Black" 
+                           Keyboard="Text"/>
+                <Entry
+                           x:Name="ttlastname" 
+                           FontSize="15" 
+                           Placeholder="Apellido" 
+                           TextColor="Black"
+                           PlaceholderColor="Black" 
+                           HorizontalOptions="FillAndExpand" 
+                           Keyboard="Text"/>
+                <Entry
+                            x:Name="ttemail" 
+                            Placeholder="Correo Electrónico"  
+                            FontSize="15" 
+                            TextColor="Black"
+                            PlaceholderColor="Black" 
+                            Keyboard="Email" 
+                            HorizontalOptions="FillAndExpand"/>
+                <Entry
+                            x:Name="ttpassword" Placeholder="Contraseña"  
+                            FontSize="15" 
+                            IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
+                            TextColor="Black"
+                            WidthRequest="300"
+                            PlaceholderColor="Black" 
+                            FontAttributes="None" 
+                            HorizontalOptions="FillAndExpand">
+                        </Entry>
+
+                <ImageButton VerticalOptions="Center"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="20"
+                                 HorizontalOptions="End"
+                                 Source="hide.png"
+                             IsVisible="false"
+                             IsEnabled="false">
+                    <ImageButton.Triggers>
+                        <EventTrigger
+                                Event="Clicked">
+                            <local:ShowHidePassword ShowIcon="show.png"
+                                                        HideIcon="hide.png"
+                                                        x:Name="ShowPasswordActualTrigger"/>
+                        </EventTrigger>
+                    </ImageButton.Triggers>
+
+                </ImageButton>
+
+
+            </StackLayout>
+
+
+            <Button Text="Crear Cuenta" TextColor="#002069" HeightRequest="40" MinimumWidthRequest="300" CornerRadius="20" BackgroundColor="#F7B700" Margin="50,10,50,10" x:Name="btn_registrar" Clicked="btn_registrar_Clicked"/>
+                <Button Text="¿Ya tienes una cuenta? Inicia sesion."  VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="10" x:Name="btn_enviologin" BackgroundColor="Transparent" TextColor="Black" Clicked="btn_enviologin_Clicked"/>
+
+            </StackLayout>
+
+
+    </StackLayout>
+    
+    
+</ContentPage>

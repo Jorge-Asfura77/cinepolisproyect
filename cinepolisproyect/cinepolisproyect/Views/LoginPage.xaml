@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:cinepolisproyect"
+             x:Class="cinepolisproyect.Views.LoginPage"
+             BackgroundColor="White">
+
+
+    <StackLayout BackgroundColor="White">
+        <FlexLayout BackgroundColor="#002069" Padding="10">
+            <Label Text="Inicio de sesión" TextColor="White" FontSize="22"></Label>
+        </FlexLayout>
+
+
+
+            <StackLayout Padding="5" VerticalOptions="CenterAndExpand">
+                <!--<Label Text="Inicio de sesión" TextColor="#002069" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,10,0,0"  FontSize="25" FontAttributes="Bold"/>-->
+
+            <Image Source="LogoCinepolis.png" HeightRequest="150" HorizontalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal" Margin="0,30,0,10">
+                    <Entry x:Name="ttemail_user" TextColor="#002069" PlaceholderColor="Black" FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                    <Entry x:Name="ttpassword" WidthRequest="300" TextColor="#002069" Placeholder="Contraseña" PlaceholderColor="Black"  FontSize="15"  IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"  FontAttributes="None" HorizontalOptions="FillAndExpand"/>
+                    <ImageButton VerticalOptions="Center"
+                                 BackgroundColor="Transparent"
+                                 IsEnabled="false"
+                                 IsVisible="false"
+                               
+                                 WidthRequest="20"
+                                 HorizontalOptions="End"
+                                 Source="hide.png">
+                        <ImageButton.Triggers>
+                            <EventTrigger
+                                Event="Clicked">
+                                <local:ShowHidePassword ShowIcon="show.png" 
+                                                        HideIcon="hide.png"
+                                                        x:Name="ShowPasswordActualTrigger"/>
+                            </EventTrigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                </StackLayout>
+
+            <Button Text="Iniciar Sesión" TextColor="#002069" HeightRequest="40" MinimumWidthRequest="300" CornerRadius="20" BackgroundColor="#F7B700" Margin="50,10,50,10" x:Name="btn_signIn" Clicked="btn_signIn_Clicked"/>
+                <Button Text="¿Olvidaste la contraseña?" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="10" TextColor="Black" BackgroundColor="Transparent" x:Name="btn_contraseña" Clicked="btn_contraseña_Clicked"/>
+                <Button Text="Regístrate Aquí" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="10" TextColor="Black" BackgroundColor="Transparent" x:Name="btn_registrate" Clicked="btn_registrate_Clicked"/>
+
+            </StackLayout>
+
+
+    </StackLayout>
+</ContentPage>

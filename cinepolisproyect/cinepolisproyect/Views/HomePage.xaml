@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Proximamente"
+             Icon="outline_home_black_24dp.png"
+             BackgroundColor="White">
+    <StackLayout>
+        <FlexLayout WidthRequest="100" BackgroundColor="#002069" Padding="5">
+            <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
+            <Button Text="Salir" TextColor="White" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand"  Margin="220,0,0,0" HorizontalOptions="End" x:Name="btn_signOut" Clicked="btn_signOut_Clicked"/>
+        </FlexLayout>
+        <ScrollView>
+            <StackLayout>
+        
+        
+            <Label Text="Proximamente" HorizontalOptions="Center" FontSize="24"/>
+            <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            <Image Source="img2.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            <Image Source="img3.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            <Image Source="img4.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+        </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

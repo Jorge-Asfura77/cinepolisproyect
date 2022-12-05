@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cinepolisproyect.Views.HorariosPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <StackLayout>
+        <FlexLayout BackgroundColor="#002069" Padding="10">
+            <Label Text="Selección de Horario" TextColor="#DEA21E" FontSize="22"></Label>
+        </FlexLayout>
+        
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+            <Button x:Name="btntrespm" Text="03:00 pm" Clicked="btntrespm_Clicked" HorizontalOptions="FillAndExpand" HeightRequest="80" FontSize="30" TextColor="#FECA30" CornerRadius="5" BackgroundColor="#002069"></Button>
+            <Button BackgroundColor="Transparent" HeightRequest="20"/>
+            <Button x:Name="btncincopm" Text="05:00 pm" Clicked="btncincopm_Clicked" HorizontalOptions="FillAndExpand" HeightRequest="80" FontSize="30" TextColor="#FECA30" CornerRadius="5" BackgroundColor="#002069"></Button>
+            <Button BackgroundColor="Transparent" HeightRequest="20"/>
+            <Button x:Name="btnsietepm" Text="07:00 pm" Clicked="btnsietepm_Clicked" HorizontalOptions="FillAndExpand" HeightRequest="80" FontSize="30" TextColor="#FECA30" CornerRadius="5" BackgroundColor="#002069"></Button>
+        </StackLayout>
+        <FlexLayout>
+            <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
+            <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtimage" Text="{Binding Imagepeli}" TextColor="Transparent"/>
+            <Label x:Name="txtdate" Text="{Binding Fechapeli}" TextColor="Transparent"/>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

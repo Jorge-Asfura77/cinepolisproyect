@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="cinepolisproyect.Views.ButacaPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <StackLayout>
+        <FlexLayout BackgroundColor="#002069" Padding="10">
+            <Label Text="Selección de Butacas" TextColor="#DEA21E" FontSize="22"></Label>
+        </FlexLayout>
+        <FlexLayout IsVisible="false">
+            <Label x:Name="txtcantas" Text="" TextColor="Transparent" />
+            <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent" />
+            <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent" />
+            <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtimage" Text="{Binding Imagepeli}" TextColor="Transparent"/>
+            <Label x:Name="txtdate" Text="{Binding Fechapeli}" TextColor="Transparent"/>
+            <Label x:Name="txtidhorario" Text="{Binding IdHorario}" TextColor="Transparent" />
+            <Label x:Name="txtidbutaca" Text="" TextColor="Transparent" />
+        </FlexLayout>
+        <ScrollView>
+            <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*" Padding="5" RowSpacing="30">
+
+
+                <Frame  BackgroundColor="#002069" CornerRadius="20" Padding="0">
+                    <StackLayout Orientation="Horizontal" Margin="5" VerticalOptions="Start" Spacing="20">
+                        <Frame Margin="5" Padding="0" CornerRadius="20">
+                            <Image Source="{Binding Imagepeli}" Aspect="AspectFill" HeightRequest="150" HorizontalOptions="Start"/>
+                        </Frame>
+
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="{Binding Pelicula}" TextColor="#FECA30" FontSize="20" FontAttributes="Bold"/>
+                            <StackLayout Orientation="Horizontal" Spacing="15">
+                                <Image Source="Time.png" HeightRequest="15" WidthRequest="15"/>
+                                <Label Text="{Binding Fechapeli}" TextColor="White" FontSize="12" VerticalOptions="Center" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Spacing="15">
+                                <Image Source="Time.png" HeightRequest="15" WidthRequest="15"/>
+                                <Label Text="{Binding Horario}" TextColor="White" FontSize="12" VerticalOptions="Center" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="15">
+                                <Image Source="Time.png" HeightRequest="15" WidthRequest="15"/>
+                                <Label Text="{Binding IdCine}" TextColor="White" FontSize="12" VerticalOptions="Center" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Grid.Row="1" Spacing="15" Margin="5" >
+
+                    <Path Stroke="#002069" Aspect="Fill" StrokeThickness="10" HeightRequest="30" Data="M0,0S74.587-33.916,148.078-33.916,293.962,0,293.962,0"/>
+
+                <StackLayout  Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                    <Label Text="Abajo" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="30">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="A" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat1" Clicked="seat1_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15"  x:Name="seat2" Clicked="seat2_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15"  x:Name="seat3" Clicked="seat3_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat4" Clicked="seat4_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat5" Clicked="seat5_Clicked"
+                                BorderColor="pink"  BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat6" Clicked="seat6_Clicked"
+                            BorderColor="pink" BorderWidth="1" 
+                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat7" Clicked="seat7_Clicked"
+                             BorderWidth="1" BorderColor="pink"
+                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="B" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat8" Clicked="seat8_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat9" Clicked="seat9_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat10" Clicked="seat10_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat11" Clicked="seat11_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat12" Clicked="seat12_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat13" Clicked="seat13_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat14" Clicked="seat14_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="C" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button   WidthRequest="15" HeightRequest="15" x:Name="seat15" Clicked="seat15_Clicked"
+                                  BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button   WidthRequest="15" HeightRequest="15" x:Name="seat16" Clicked="seat16_Clicked" BorderColor="pink" BorderWidth="1" 
+                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat17"  Clicked="seat17_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat18"  Clicked="seat18_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat19" Clicked="seat19_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat20" Clicked="seat20_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat21" Clicked="seat21_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="D" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat22" Clicked="seat22_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat23" Clicked="seat23_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat24" Clicked="seat24_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat25"  Clicked="seat25_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat26" Clicked="seat26_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat27" Clicked="seat27_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat28" Clicked="seat28_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="E" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat29"  Clicked="seat29_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat30"  Clicked="seat30_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat31" Clicked="seat31_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat32" Clicked="seat32_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat33" Clicked="seat33_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat34" Clicked="seat34_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat35" Clicked="seat35_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="" TextColor="white" FontSize="12" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="1" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="2" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="3" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="4" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="5" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="6" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="7" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout  Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                    <Label Text="Arriba" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="F" TextColor="WHITE" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat36" Clicked="seat36_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat37" Clicked="seat37_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat38" Clicked="seat38_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat39" Clicked="seat39_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat40" Clicked="seat40_Clicked"
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="" TextColor="white" FontSize="12" HeightRequest="15" WidthRequest="15" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="1" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="2" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="3" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="4" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="5" TextColor="white" HeightRequest="15" WidthRequest="15" FontSize="12" VerticalOptions="Center" />
+                    </StackLayout>
+
+                </StackLayout>
+
+
+                <BoxView BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="End"/>
+
+                <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle Stroke="pink" Fill="transparent" StrokeThickness="1" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
+                            <Label Text="Vacío" TextColor="#222222" FontSize="14" VerticalOptions="Center"/>
+                    </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Rectangle Fill="#FECA30" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
+                            <Label Text="Ocupado" TextColor="#222222" FontSize="14" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                        <Rectangle Stroke="pink" StrokeThickness="1" Fill="#002069" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
+                        <Label Text="Tu Selección" TextColor="#222222" FontSize="14" VerticalOptions="Center"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </StackLayout>
+
+                <Button Grid.Row="2" x:Name="btncomprar" Clicked="btncomprar_Clicked" Text="Comprar boletos"  TextColor="#002069" HeightRequest="40" 
+                    CornerRadius="20" BackgroundColor="#F7B700" HorizontalOptions="FillAndExpand" Margin="5"/>
+
+            </Grid>
+    </ScrollView>
+    </StackLayout>
+</ContentPage>

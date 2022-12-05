@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "316786781100",
+    "project_id": "login-xamarin-8d20d",
+    "storage_bucket": "login-xamarin-8d20d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316786781100:android:e6f3339a708a6da7f4a809",
+        "android_client_info": {
+          "package_name": "com.companyname.cinepolisproyect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316786781100-6jnjp8kev5o6uacjhavv7ulujt7ih7l1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.cinepolisproyect",
+            "certificate_hash": "077fdd35d0e3978c846c89235b534343929a34ca"
+          }
+        },
+        {
+          "client_id": "316786781100-4fmevd4homeruql9pi7u82gptstu2krm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfQLVSTXM_DuQlqZ9nyhQ4CP1mgbiCN6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316786781100-4fmevd4homeruql9pi7u82gptstu2krm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
